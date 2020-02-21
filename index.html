@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
+        <script src="./js/functions.js"></script>
+        <script src="./js/api.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div id="1" style="text-align: center;">
+            <div class="card">
+                <div class="card-header">
+                    <h1>How do you describe yourself as a developer?</h1>
+                </div>
+                <div class="card-body">
+                    <select id="q1" class="form-control">
+                        <option value="Hermit">Hermit</option>
+                        <option value="Sociable">Sociable</option>
+                        <option value="Serious">Serious</option>
+                        <option value="Grumpy">Grumpy</option>
+                        <option value="do not know yet">do not know yet</option>
+                      </select>
+                      <button class="progress-next btn btn-dark" onclick="next(1)">Next</button>
+                </div>
+              </div>
+        </div>
+
+        <div id="2" style="display: none;text-align: center;">
+            <div class="card">
+                <div class="card-header">
+                    <h1>Select the JavaScript based technologies:</h1>
+                </div>
+                <div class="card-body">
+                    <input type="checkbox" id="tech1" name="tech1" value="AngularJS ">
+                    <label for="tech1"> AngularJS </label><br>
+        
+                    <input type="checkbox" id="tech2" name="tech2" value="Ember ">
+                    <label for="tech2"> Ember </label><br>
+        
+                    <input type="checkbox" id="tech3" name="tech3" value="VueJS ">
+                    <label for="tech3"> VueJS </label><br>
+        
+                    <input type="checkbox" id="tech4" name="tech4" value="Java ">
+                    <label for="tech4"> Java </label><br>
+        
+                    <input type="checkbox" id="tech5" name="tech5" value="C# ">
+                    <label for="C#"> C# </label><br>
+                      <button class="progress-next btn btn-dark" onclick="next(2)">Next</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="3" style="display: none;text-align: center;">
+            <div class="card">
+                <div class="card-header">
+                    <h1>Introduce a palindrome:</h1>
+                </div>
+                <div class="card-body">
+                    <input class="form-control" type="text" id="palindrome" name="palindrome">
+                    <button  class="progress-next btn btn-dark" onclick="next(3)">Next</button>
+                </div>
+            </div>
+        </div>
+
+        
+        <div id="4" class="container" style="display: none;text-align: center;">
+            <div class="card">
+                <div class="card-header">
+                    <h1>Introduce a sentence :</h1>
+                </div>
+                <div class="card-body">
+                    <input class="form-control" type="text" id="sentence" name="sentence">
+                    <h1>Type the first sentence in reverse:</h1>
+                    <input class="form-control" type="text" id="reverse" name="reverse">
+                    <button class="progress-next btn btn-dark" onclick="next(4)">Next</button>
+                </div>
+            </div>
+            
+        </div>
+
+        <div id="5" class="container" style="display: none;text-align: center;">
+            <h1>Results :</h1>
+            <p>How do you describe yourself as a developer?</p>
+            <div id="result1"></div>
+            <p>JavaScript based technologies:</p>
+            <div id="result2"></div>
+            <p>Your palindrome status is:</p>
+            <div id="result3"></div>
+            <p>Your sentences are :</p>
+            <div id="result4"></div>
+        </div>
+
+        <div id="bar">
+            <p>Progress:</p>
+            <div class="progress" style="width: 400px;">
+                <div class="progress-bar progress-bar-striped step-1 active"></div>
+            </div>
+        </div>
+
+        <div id="restaurants" style="width:65%;display: none;">
+        </div>
+
+    </body>
+</html>
+
+<script>
+    $(document).on('click', '.progress-next', function() {
+        var cl = $(".progress-bar").attr("class").split(/\s/).filter(function( cn ) {
+            return cn.indexOf('step') === 0;
+        });
+        var step = parseInt(cl[0].split('-')[1]) + 1;
+        var newclass = "step-" + step; 
+    $(".progress-bar").removeClass(cl[0]).addClass(newclass)
+})
+
+
+
+$( document ).ready(function() {
+    var counter = 0;
+    var interval = setInterval(function() {
+        counter++;
+        if (counter == 10) {
+            alert("Time's over!");
+        }
+    }, 1000);
+});
+</script>
+

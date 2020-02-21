@@ -1,0 +1,66 @@
+body{
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+h1{
+    color: #000;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-bottom: 5%;
+    font-size: 30px!important;
+}
+.progress-bar {
+    background-color: blue;
+  }
+  
+  .progress-bar.step-1 {
+    width: 25%;
+  }
+  
+  .progress-bar.step-2 {
+    width: 50%;
+  }
+  
+  .progress-bar.step-3 {
+    width: 75%;
+  }
+  
+  .progress-bar.step-4 {
+    width: 100%;
+  }
+.btn-dark{
+  margin-top:4%;
+}
+.green{
+  background: #28a745;
+  color:#fff;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 5px;
+  width: 3em;
+  margin-left: 18%;
+}
+.ad{
+  width: 60%; 
+  background: rgba(0,0,0,.03);
+  margin-top:5%;
+}
+.votes{
+  color: #545b62;margin-top: -13%;font-size: 11px;
+}
+.of{
+  color:#d8d8d8;font-size: 16px;
+}
+.green-col{
+  text-align: center;padding-top: 3%;
+}
+.info{
+  margin-top: 8%;
+  color:#545b62;
+}
+.info-col{
+  padding-top: 3%;
+}
