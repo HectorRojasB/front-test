@@ -17,16 +17,6 @@ function next($q){
     this.update();
     document.getElementById($q).style.display = "none";
     document.getElementById($q+1).style.display = "block";
-    if($q=="2")
-    {
-        var counter = 0;
-        var interval = setInterval(function() {
-        counter++;
-        if (counter == 10) {
-            alert("Time's over!");
-        }
-    }, 1000);
-    }
 
     if($q=="4")
     {
